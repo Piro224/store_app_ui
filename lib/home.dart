@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:store_app_ui/market.dart';
+import 'package:store_app_ui/sign_in.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -41,7 +42,7 @@ class Home extends StatelessWidget {
               onTap: () {
                 Navigator.pushReplacement(context, MaterialPageRoute(
                   builder: (context) {
-                    return const Market();
+                    return const SignInPage();
                   },
                 ));
               },
