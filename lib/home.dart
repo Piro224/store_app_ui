@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:store_app_ui/sign_in.dart';
+import 'package:store_app_ui/sign_in/sign_in.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});

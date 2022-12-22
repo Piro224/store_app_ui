@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:store_app_ui/home.dart';
-import 'package:store_app_ui/product.dart';
+import 'package:store_app_ui/components/product.dart';
 
 void main() {
   runApp(const MyApp());

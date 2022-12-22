@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:store_app_ui/cart_page.dart';
-import 'package:store_app_ui/product.dart';
-import 'package:store_app_ui/product_card.dart';
+import 'package:store_app_ui/components/cart_page.dart';
+import 'package:store_app_ui/components/product.dart';
+import 'package:store_app_ui/components/product_card.dart';
 
 class Market extends StatelessWidget {
   const Market({super.key});
