@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:store_app_ui/market.dart';
 import 'package:store_app_ui/sign_in.dart';
 
 class Home extends StatelessWidget {
