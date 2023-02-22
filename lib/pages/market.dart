@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:store_app_ui/components/cart_page.dart';
+import 'package:store_app_ui/pages/cart_page.dart';
 import 'package:store_app_ui/components/product.dart';
 import 'package:store_app_ui/components/product_card.dart';
 
@@ -68,10 +68,10 @@ class Market extends StatelessWidget {
                 builder: (context, value, child) {
                   return Container(
                     decoration: const BoxDecoration(
-                      color: Colors.white54,
+                      color: Colors.white70,
                       borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(40),
-                        topRight: Radius.circular(40),
+                        topLeft: Radius.circular(20),
+                        topRight: Radius.circular(20),
                       ),
                     ),
                     child: GridView.builder(
