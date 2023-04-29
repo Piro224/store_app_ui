@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-class ProductCard extends StatelessWidget {
+class ProductCard extends StatefulWidget {
   final color;
   final String itemName;
   final String itemPrice;
@@ -19,12 +19,19 @@ class ProductCard extends StatelessWidget {
   });
 
   @override
+  State<ProductCard> createState() => _ProductCardState();
+}
+
+class _ProductCardState extends State<ProductCard> {
+  bool btntapped = true;
+
+  @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(12.0),
       child: Container(
         decoration: BoxDecoration(
-          color: color,
+          color: widget.color,
           borderRadius: BorderRadius.circular(10),
         ),
         child: Column(
@@ -35,14 +42,14 @@ class ProductCard extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(12.0),
               child: Image.asset(
-                imagePath,
+                widget.imagePath,
                 height: 80,
               ),
             ),
             const Spacer(),
             //The ItemName
             Text(
-              itemName,
+              widget.itemName,
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
               ),
@@ -51,23 +58,53 @@ class ProductCard extends StatelessWidget {
 
             //The ItemPrice and wrap with gesture detector
 
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.amber,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: MaterialButton(
-                  onPressed: onPressed,
-                  child: Text(
-                    "\$$itemPrice",
-                    style: const TextStyle(
-                      fontWeight: FontWeight.bold,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.amber,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: MaterialButton(
+                      onPressed: widget.onPressed,
+                      child: Text(
+                        "\$${widget.itemPrice}",
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ),
                   ),
                 ),
-              ),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(
+                      15,
+                    ),
+                    color: btntapped ? Colors.amber : Colors.white,
+                  ),
+                  child: IconButton(
+                    onPressed: () {
+                      widget.onPressed;
+                      setState(() {
+                        btntapped = !btntapped;
+                      });
+                    },
+                    icon: btntapped
+                        ? const Icon(
+                            Icons.add,
+                            color: Colors.black,
+                          )
+                        : const Icon(
+                            Icons.check,
+                            color: Colors.green,
+                          ),
+                  ),
+                )
+              ],
             ),
             const Spacer(),
           ],

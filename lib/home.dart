@@ -45,20 +45,23 @@ class Home extends StatelessWidget {
                   },
                 ));
               },
-              child: Container(
-                width: 150,
-                height: 70,
-                decoration: BoxDecoration(
-                  color: Colors.amber,
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: const FittedBox(
-                  child: Padding(
-                    padding: EdgeInsets.all(12.0),
-                    child: Text(
-                      "Get Started",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: double.infinity,
+                  height: 55,
+                  decoration: BoxDecoration(
+                    color: Colors.amber,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: const FittedBox(
+                    child: Padding(
+                      padding: EdgeInsets.all(12.0),
+                      child: Text(
+                        "Get Started",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
