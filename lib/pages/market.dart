@@ -79,7 +79,7 @@ class Market extends StatelessWidget {
                         itemCount: value.products.length,
                         gridDelegate:
                             const SliverGridDelegateWithFixedCrossAxisCount(
-                                childAspectRatio: 1 / 1.2, crossAxisCount: 2),
+                                childAspectRatio: 1 / 1.4, crossAxisCount: 2),
                         itemBuilder: (context, index) {
                           return ProductCard(
                             color: value.products[index][0],

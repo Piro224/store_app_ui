@@ -46,13 +46,13 @@ class Home extends StatelessWidget {
                 ));
               },
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(18.0),
                 child: Container(
                   width: double.infinity,
                   height: 55,
                   decoration: BoxDecoration(
                     color: Colors.amber,
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(14),
                   ),
                   child: const FittedBox(
                     child: Padding(
